@@ -7,3 +7,8 @@ rustflags = [
 
 [build]
 target = "riscv32i-unknown-none-elf"
+
+[profile.dev]
+opt-level = "s"               # Use slightly better optimizations.
+overflow-checks = false     # Disable integer overflow checks.
+lto = "fat"
