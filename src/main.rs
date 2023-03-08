@@ -4,7 +4,6 @@
 extern crate panic_halt;
 
 use riscv_rt::entry;
-use core::panic::PanicInfo;
 
 pub fn square(num: i32) -> i32 {
     num * num
@@ -12,5 +11,9 @@ pub fn square(num: i32) -> i32 {
 
 #[entry]
 fn main() -> ! {
-    loop {}
+    let a = 5;
+    let b = square(a);
+    loop {
+        
+    }
 }
